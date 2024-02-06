@@ -37,3 +37,6 @@ RUN apt install -y libwebkit2gtk-4.0-dev \
 # Set up work  directory
 WORKDIR /notella-docker
 COPY . .
+
+# Run bash
+CMD ["/bin/bash"]
