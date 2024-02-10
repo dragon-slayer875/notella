@@ -3,7 +3,7 @@
 }
 
 .placeholder {
-    @apply absolute top-0 left-0 text-base;
+    @apply absolute top-0 left-0 text-base my-5;
 }
 
 /* .editor-bold {
