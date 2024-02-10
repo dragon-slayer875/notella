@@ -3,6 +3,7 @@ import { fontSans } from "./fonts";
 import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import { ThemeToggle } from "@/components/ui/theme-toggle";
 
 export const metadata: Metadata = {
     title: "Create Next App",
@@ -29,6 +30,7 @@ export default function RootLayout({
                     disableTransitionOnChange
                 >
                     {children}
+                    <ThemeToggle />
                 </ThemeProvider>
             </body>
         </html>
