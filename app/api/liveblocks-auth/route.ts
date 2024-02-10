@@ -1,7 +1,7 @@
 import { Liveblocks } from "@liveblocks/node";
 import { NextRequest } from "next/server";
 
-const API_KEY = "sk_dev_UYzXFEKl0J1D4LKBXmnz8pL9TrPvjqA2rR3inVY8JHdi4LpZFm9oLDKE_Es5uGwg";
+const API_KEY = process.env.LIVEBLOCKS_SECERET_KEY;
 
 const liveblocks = new Liveblocks({
   secret: API_KEY!,
