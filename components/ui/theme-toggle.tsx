@@ -17,7 +17,7 @@ export function ThemeToggle() {
             onClick={() => {
                 theme === "dark" ? setTheme("light") : setTheme("dark");
             }}
-            className=" absolute bottom-4 right-4 dark:bottom-4 dark:right-4 transition-all"
+            className=" absolute bottom-64 right-64 transition-all"
         >
             <Sun className="h-[1.5rem] w-[1.5rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
             <Moon className="absolute h-[1.5rem] w-[1.5rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
