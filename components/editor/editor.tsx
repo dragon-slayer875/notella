@@ -1,5 +1,5 @@
 "use client";
-import { $getRoot, $getSelection } from "lexical";
+import { $getRoot, $getSelection, EditorState } from "lexical";
 import { SetStateAction, useEffect, useState } from "react";
 import "./editor.css";
 import { LexicalComposer } from "@lexical/react/LexicalComposer";
@@ -19,18 +19,11 @@ import { ContentEditable} from "@lexical/react/LexicalContentEditable";
 import { HistoryPlugin } from "@lexical/react/LexicalHistoryPlugin";
 import { useLexicalComposerContext } from "@lexical/react/LexicalComposerContext";
 import LexicalErrorBoundary from "@lexical/react/LexicalErrorBoundary";
+import { notellaTheme } from "./notellaTheme";
 
 interface Props {};
 
-const theme = {
-    ltr: "ltr",
-    rtl: "rtl",
-    placeholder: "editor-placeholder",
-    paragraph: "editor-paragraph", // Theme styling goes here
-};
-
-const markdown = `# Welcome to Lexical!`;
-
+const markdown = `Welcome to Lexical!`;
 
 
 // Lexical React plugins are React components, which makes them
@@ -48,11 +41,8 @@ function MyCustomAutoFocusPlugin(): null {
     return null;
 }
 
-function MyOnChangePlugin({
-    onChange,
-}: {
-    onChange: (editorState: any) => void;
-}): null {
+function MyOnChangePlugin(props: {onChange: (editorState: EditorState) => void}): null {
+    const { onChange } = props; // Destructure the props
     const [editor] = useLexicalComposerContext();
     useEffect(() => {
         return editor.registerUpdateListener(({ editorState }) => {
@@ -78,7 +68,7 @@ export default function Editor({}: Props): JSX.Element {
 
     const initialConfig = {
         namespace: "MyEditor",
-        theme,
+        theme: notellaTheme,
         onError,
         nodes: [ HeadingNode, QuoteNode, CodeNode, LinkNode, ListNode, ListItemNode, HorizontalRuleNode],
         editorState: () => $convertFromMarkdownString(markdown, TRANSFORMERS)

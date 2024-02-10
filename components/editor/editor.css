@@ -1,6 +1,39 @@
 .contentEditable {
-    @apply w-full h-full outline-none;
+    @apply w-full h-full outline-none text-base prose dark:prose-invert;
 }
+
 .placeholder {
-    @apply absolute top-0 left-0;
+    @apply absolute top-0 left-0 text-base;
 }
+
+/* .editor-bold {
+    @apply font-bold;
+}
+
+.editor-italic {
+    @apply italic;
+}
+
+.editor-underline {
+    @apply underline;
+}
+
+.editor-strikethrough {
+    @apply line-through;
+}
+
+.editor-h1 {
+    @apply  font-bold;
+}
+
+.editor-list-ol, .editor-list-ul {
+    @apply my-3;
+}
+
+.editor-list-ul {
+    @apply list-disc;
+}
+
+.editor-list-ol {
+    @apply list-decimal;
+} */

@@ -13,9 +13,11 @@
     "@lexical/code": "^0.13.1",
     "@lexical/link": "^0.13.1",
     "@lexical/list": "^0.13.1",
+    "@lexical/mark": "^0.13.1",
     "@lexical/markdown": "^0.13.1",
     "@lexical/react": "^0.13.1",
     "@lexical/rich-text": "^0.13.1",
+    "@lexical/table": "^0.13.1",
     "@radix-ui/react-slot": "^1.0.2",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
@@ -29,6 +31,7 @@
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
+    "@tailwindcss/typography": "^0.5.10",
     "@tauri-apps/cli": "^1.5.9",
     "@types/node": "^20",
     "@types/react": "^18",
