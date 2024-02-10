@@ -1,0 +1,6 @@
+.contentEditable {
+    @apply w-full h-full outline-none;
+}
+.placeholder {
+    @apply absolute top-0 left-0;
+}
